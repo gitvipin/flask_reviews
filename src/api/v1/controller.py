@@ -27,8 +27,8 @@ class ControllerApi(object):
         self._add_url_route('home', '/',
                             self._rhandler.hello, 'GET')
 
-        self._add_crud_routes()
-        self._add_admin_routes()
+        # self._add_crud_routes()
+        # self._add_admin_routes()
 
     def _add_admin_routes(self):
         """

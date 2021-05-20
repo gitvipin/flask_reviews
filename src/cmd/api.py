@@ -6,7 +6,7 @@ from flask import Flask
 
 
 from src.api.v1.controller import ControllerApi
-from src.api.v1.apps import jwt, db
+from src.api.v1.apps import jwt, reviews_db
 from src.core.logger import setup_logging
 from src.core.config import LoggingConf, controller_config
 
@@ -27,7 +27,7 @@ class ControllerApiService(object):
 
         @app.before_first_request
         def create_tables():
-            db.create_all()
+            reviews_db.create_all()
 
         self.log.info("-----Controller APP Initialized------")
 
