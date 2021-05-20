@@ -20,11 +20,7 @@ from src.core.exception import wrap_api_exception
 from src.core.errors import CoreException
 from src.core.utils import get_jwt_user, jwt_registered
 
-
-from src.core.errors import BadRequestError, InvalidResourceError
-from flask_jwt_extended.exceptions import NoAuthorizationError, \
-    RevokedTokenError
-
+from src.core.errors import BadRequestError
 
 log = logging.getLogger(__name__)
 

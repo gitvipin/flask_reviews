@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import logging
 
-from src.api.v1 import RouteHandler
+from src.api.v1.routes import RouteHandler
 
 
 class ControllerApi(object):

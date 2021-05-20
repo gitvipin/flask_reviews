@@ -6,7 +6,7 @@ from flask import Flask
 
 
 from src.api.v1.controller import ControllerApi
-from src.api.v1.apps import db, jwt
+from src.api.v1.apps import jwt, db
 from src.core.logger import setup_logging
 from src.core.config import LoggingConf, controller_config
 
@@ -24,7 +24,6 @@ class ControllerApiService(object):
         self.app.config.from_object(config)
 
         jwt.init_app(app)   # Initialize JWT app
-        db.init_app(self.app)   # Initialize DB app
 
         @app.before_first_request
         def create_tables():
